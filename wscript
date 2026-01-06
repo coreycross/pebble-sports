@@ -21,6 +21,9 @@ def configure(ctx):
     Universal configuration: add your change prior to calling ctx.load('pebble_sdk').
     """
     ctx.load('pebble_sdk')
+    # Provide time_t without pulling in <time.h>, which the SDK disables.
+    for env in ctx.all_envs.values():
+        env.append_value('CFLAGS', ['-include', 'sys/types.h', '-Wno-error'])
 
 
 def build(ctx):
