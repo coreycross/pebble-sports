@@ -185,8 +185,8 @@ void game_set(Game *game, DictionaryIterator *iter) {
     char *team_1_name = memorize_dict_string(iter, MESSAGE_KEY_SEND_GAME_TEAM_1_NAME);
     char *team_2_name = memorize_dict_string(iter, MESSAGE_KEY_SEND_GAME_TEAM_2_NAME);
 
-    int team_1_id = dict_find(iter, MESSAGE_KEY_SEND_GAME_TEAM_1_ID)->value->int8;
-    int team_2_id = dict_find(iter, MESSAGE_KEY_SEND_GAME_TEAM_2_ID)->value->int8;
+    int team_1_id = dict_find(iter, MESSAGE_KEY_SEND_GAME_TEAM_1_ID)->value->int32;
+    int team_2_id = dict_find(iter, MESSAGE_KEY_SEND_GAME_TEAM_2_ID)->value->int32;
 
     char *team_1_score = memorize_dict_string(iter, MESSAGE_KEY_SEND_GAME_TEAM_1_SCORE);
     char *team_2_score = memorize_dict_string(iter, MESSAGE_KEY_SEND_GAME_TEAM_2_SCORE);

@@ -95,27 +95,27 @@ static void menu_cell_game_large_draw(GContext* ctx, const Layer *cell_layer, bo
     int horz_padding = PBL_IF_ROUND_ELSE(16, 8); 
     int vert_padding = PBL_IF_ROUND_ELSE(4, 0); 
 
-    GSize team_1_name_size = graphics_text_layout_get_content_size(game->team1.name, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize team_1_name_size = graphics_text_layout_get_content_size(game->team1.name, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect team_1_name_bounds = GRect(horz_padding, vert_padding, team_1_name_size.w, 18);
     graphics_draw_text(ctx, game->team1.name, font_bold, team_1_name_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft, NULL);
     
-    GSize team_2_name_size = graphics_text_layout_get_content_size(game->team2.name, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize team_2_name_size = graphics_text_layout_get_content_size(game->team2.name, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect team_2_name_bounds = GRect(horz_padding,vert_padding + 18, team_2_name_size.w, 18);
     graphics_draw_text(ctx, game->team2.name, font_bold, team_2_name_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft, NULL);
 
-    GSize team_1_score_size = graphics_text_layout_get_content_size(game->team1.score, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize team_1_score_size = graphics_text_layout_get_content_size(game->team1.score, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect team_1_score_bounds = GRect(cell_bounds.size.w - horz_padding - team_1_score_size.w, vert_padding, team_1_score_size.w, 18);
     graphics_draw_text(ctx, game->team1.score, font_bold, team_1_score_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentRight, NULL);
 
-    GSize team_2_score_size = graphics_text_layout_get_content_size(game->team2.score, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize team_2_score_size = graphics_text_layout_get_content_size(game->team2.score, font_bold, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect team_2_score_bounds = GRect(cell_bounds.size.w - horz_padding - team_2_score_size.w, vert_padding + 18, team_2_score_size.w, 18);
     graphics_draw_text(ctx, game->team2.score, font_bold, team_2_score_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentRight, NULL);
 
-    GSize details_size = graphics_text_layout_get_content_size(game->details, font_regular, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize details_size = graphics_text_layout_get_content_size(game->details, font_regular, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect details_bounds = GRect(horz_padding, vert_padding + 36, details_size.w, 14);
     graphics_draw_text(ctx, game->details, font_regular, details_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft, NULL);
 
-    GSize time_size = graphics_text_layout_get_content_size(game->time, font_regular, cell_bounds, GTextOverflowModeTrailingEllipsis, GAlignTopLeft);
+    GSize time_size = graphics_text_layout_get_content_size(game->time, font_regular, cell_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentLeft);
     GRect time_bounds = GRect(cell_bounds.size.w - horz_padding - time_size.w, vert_padding + 36, time_size.w, 14);
     graphics_draw_text(ctx, game->time, font_regular, time_bounds, GTextOverflowModeTrailingEllipsis, GTextAlignmentRight, NULL);
 

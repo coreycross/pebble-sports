@@ -15,8 +15,8 @@
                 "type": "checkboxgroup",
                 "messageKey": "CONFIG_LEAGUES",
                 "label": "Visible Leagues",
-                "defaultValue": [true, true, true, true],
-                "options": ["NFL", "MLB", "NHL", "NBA"]
+                "defaultValue": [true, true, true, true, true],
+                "options": ["NFL", "MLB", "NHL", "NBA", "NCAAM"]
             }
         ]
     },

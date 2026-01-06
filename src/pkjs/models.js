@@ -3,7 +3,8 @@ const sports = {
     NFL: 1,
     MLB: 2,
     NHL: 3,
-    NBA: 4
+    NBA: 4,
+    NCAAM: 5
 }
 
 const possession = {
