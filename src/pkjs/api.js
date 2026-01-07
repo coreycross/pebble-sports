@@ -60,6 +60,7 @@ function getEndpointForSport(sport) {
         case models.sports.NHL: endpoint += '/hockey/nhl'; break;
         case models.sports.NBA: endpoint += '/basketball/nba'; break;
         case models.sports.NCAAM: endpoint += '/basketball/mens-college-basketball'; break;
+        case models.sports.NCAAW: endpoint += '/basketball/womens-college-basketball'; break;
         default: break;
     }
     return endpoint;
