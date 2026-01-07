@@ -18,6 +18,9 @@ int sport_get_icon_res_small(Sport sport) {
         case SportNCAAM:
             return RESOURCE_ID_BASKETBALL_16;
 
+        case SportNCAAW:
+            return RESOURCE_ID_BASKETBALL_16;
+
         default:
             return RESOURCE_ID_STAR_16;
             break;
@@ -39,6 +42,9 @@ int sport_get_icon_res_large(Sport sport) {
             return RESOURCE_ID_BASKETBALL_25;
 
         case SportNCAAM:
+            return RESOURCE_ID_BASKETBALL_25;
+
+        case SportNCAAW:
             return RESOURCE_ID_BASKETBALL_25;
 
         default:
@@ -63,6 +69,9 @@ char* sport_get_name(Sport sport) {
 
         case SportNCAAM:
             return "NCAAM";
+
+        case SportNCAAW:
+            return "NCAAW";
 
         default:
             return "Favorite";

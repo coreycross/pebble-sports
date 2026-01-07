@@ -4,7 +4,8 @@ const sports = {
     MLB: 2,
     NHL: 3,
     NBA: 4,
-    NCAAM: 5
+    NCAAM: 5,
+    NCAAW: 6
 }
 
 const possession = {

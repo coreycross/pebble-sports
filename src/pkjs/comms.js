@@ -7,8 +7,13 @@ function sendGameList(requestID, games) {
     if (games.length == 0) {
         sendEmptyGameList(requestID);
     } else {
-        console.log("sending games = ", JSON.stringify(games));
-        sendGameListItem(requestID, games, 0);
+        console.log("sending games, count = ", games.length);
+        try {
+            sendGameListItem(requestID, games, 0);
+        } catch (e) {
+            console.log("sendGameListItem error = ", e && e.stack ? e.stack : e);
+            sendGameListError(requestID);
+        }
     }
 }
 
@@ -42,20 +47,25 @@ function sendGameListItem(requestID, games, index) {
 
     console.log("sending item ", index);
 
-    Pebble.sendAppMessage(dict, function () {
-        console.log("message success");
-        // Use success callback to increment index
-        index++;
+    try {
+        Pebble.sendAppMessage(dict, function () {
+            console.log("message success");
+            // Use success callback to increment index
+            index++;
 
-        if (index < games.length) {
-            // Send next item
-            sendGameListItem(requestID, games, index);
-        } else {
-            console.log('Last item sent!');
-        }
-    }, function () {
-        console.log('Item transmission failed at index: ' + index);
-    });
+            if (index < games.length) {
+                // Send next item
+                sendGameListItem(requestID, games, index);
+            } else {
+                console.log('Last item sent!');
+            }
+        }, function () {
+            console.log('Item transmission failed at index: ' + index);
+        });
+    } catch (e) {
+        console.log("sendAppMessage error = ", e && e.stack ? e.stack : e);
+        sendGameListError(requestID);
+    }
 }
 
 function sendEmptyGameList(requestID) {

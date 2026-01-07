@@ -7,8 +7,8 @@
 
 
 // Largest expected inbox and outbox message sizes
-const uint32_t inbox_size = 256;
-const uint32_t outbox_size = 256;
+const uint32_t inbox_size = 1024;
+const uint32_t outbox_size = 1024;
 
 static bool s_js_ready;
 

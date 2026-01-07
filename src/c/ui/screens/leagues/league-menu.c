@@ -7,11 +7,11 @@
 #include "../../../utils/utils.h"
 
 #define NUM_MENU_SECTIONS 1
-#define NUM_LEAGUES 6
+#define NUM_LEAGUES 7
 
 static Window *leagueMenuWindow;
 static MenuLayer *s_menu_layer;
-static Sport s_sports_items[NUM_LEAGUES] = {Favorites, SportNFL, SportMLB, SportNHL, SportNBA, SportNCAAM};
+static Sport s_sports_items[NUM_LEAGUES] = {Favorites, SportNFL, SportMLB, SportNHL, SportNBA, SportNCAAM, SportNCAAW};
 static GBitmap *s_icons[NUM_LEAGUES];
 
 

@@ -16,7 +16,7 @@ typedef enum {
 } AppError;
 
 typedef enum {
-    Favorites, SportNFL, SportMLB, SportNHL, SportNBA, SportNCAAM
+    Favorites, SportNFL, SportMLB, SportNHL, SportNBA, SportNCAAM, SportNCAAW
 } Sport;
 
 typedef enum {
